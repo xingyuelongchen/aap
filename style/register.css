@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document 登陆页面样式表*/
+body{
+	background:#fff;
+}
+.content{
+	background:#fbfbfb;
+	margin-top:50px;
+	height:350px;
+	border: 1px solid #cecece;
+	border-radius:10px;
+}
+.con_input{
+	width:600px;
+	text-align: center;
+}
+.login_table tr{
+	display: block;
+	width:500px;
+	height:100%;
+	margin:5px 0;
+}
+.login_table td{
+	width:33%;
+	height:50px;
+	padding-left:15px;
+}
+.login_table .input_w{
+	width:170px;
+	height:40px;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	border-radius:5px;
+}
+

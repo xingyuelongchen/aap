@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="../style/js/jquery.js"></script>
+</head>
+
+<body>
+<form enctype="multipart/form-data">
+	<input type="hidden" name="MAX_FILE_SIZE" value="1048576"><!--设置表单限制-->
+	<input type="file" name="myfile[]" multiple id="file">
+<input type="button" id="btn" value="a">
+</form>
+<script type="text/javascript">
+	var localhost = "http://127.0.0.1/app";
+	var btn=document.getElementById('btn');
+	btn.onclick=function(){
+		var files = document.getElementById("file").files;
+		//console.log(files);
+		upfile(files,'order');
+	}
+	/*-
+	*	arr		object		需要上传的文件数据
+	*	local	string		通过什么操作上传本次数据。
+	*	return 	object		服务端返回的数据	
+	*/
+function upfile(arr,local) {
+//console.log(arr.length);return;
+	
+		var FormDate= new FormData();
+		FormDate.append("act","upfiles");
+		FormDate.append("local",local);
+		for(var i=0;i<arr.length;i++){
+			FormDate.append(i,arr[i]);
+			
+		}
+		console.log(FormDate.get(0));
+		//console.log(FormDate);
+		 $.ajax({
+			url: localhost+"/query.php",
+			type: "POST",
+			processData: false,
+			contentType: false,
+			data: FormDate,
+			success: function(d) {
+				console.log(d);
+			 },
+			error:function(XMLHttpRequest,textStatus){
+				console.log(XMLHttpRequest.readyState+"  ;  "+XMLHttpRequest.status+"  ;  "+textStatus);
+			}
+		 });
+}
+</script>
+</body>
+</html>

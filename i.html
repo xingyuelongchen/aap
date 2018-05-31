@@ -1,0 +1,92 @@
+﻿<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+<!-- <head> -->
+<!-- <meta charset=" utf-8"> -->
+<!-- <meta name="author" content="http://www.jb51.net/" /> -->
+<!-- <title>指定被打印的内容</title> -->
+<!-- <script language="javascript">  -->
+<!-- function printdiv(printpage)  -->
+<!-- {  -->
+<!-- var newstr = printpage.innerHTML;  -->
+<!-- var oldstr = document.body.innerHTML;  -->
+<!-- document.body.innerHTML =newstr;  -->
+<!-- window.print();  -->
+<!-- document.body.innerHTML=oldstr;  -->
+<!-- return false;  -->
+<!-- }  -->
+<!-- window.onload=function() -->
+<!-- { -->
+<!-- var bt=document.getElementById("bt"); -->
+<!-- var div_print=document.getElementById("div_print"); -->
+<!-- bt.onclick=function() -->
+<!-- { -->
+<!-- printdiv(div_print); -->
+<!-- } -->
+<!-- } -->
+<!-- </script>  -->
+<!-- </head>  -->
+<!-- <body>  -->
+<!-- <div id="div_print">  -->
+<!-- <h1 style="Color:Red">这是要被打印的内容</h1>  -->
+<!-- </div> -->
+<!-- <div style="Color:Red">欢迎您</div>  -->
+<!-- <input name="print" type="button" id="bt" value="点击打印" />  -->
+<!-- </body>  -->
+<!-- </html> -->
+
+<?PHP
+
+var hkey_root,hkey_path,hkey_key
+hkey_root="HKEY_CURRENT_USER"
+hkey_path="\Software\Microsoft\Internet Explorer\PageSetup\"
+
+// 设置页眉页脚为空
+function PageSetup_Null()
+{
+try{
+var RegWsh = new ActiveXObject("WScript.Shell") ;
+hkey_key="header" ;
+RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"") ;
+hkey_key="footer" ;
+RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"") ;
+}
+catch(e){}
+}
+
+// 设置页眉页脚为默认值
+function PageSetup_Default()
+{
+try{
+var RegWsh = new ActiveXObject("WScript.Shell") ;
+hkey_key="header" ;
+RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&w&b页码，&p/&P") ;
+hkey_key="footer" ;
+RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&u&b&d") ;
+}
+catch(e){}
+}
+
+// 打印
+function PrintPage()
+{
+PageSetup_Null() ;
+window.print() ;
+// PageSetup_Default() ;
+
+}
+
+document.write('<style media=print>' );
+document.write('.Noprint{display:none;}');//用本样式在打印时隐藏非打印项目
+document.write('.PageNext{page-break-after: always;}');//控制分页
+document.write('</style>');
+document.write('<object id=WebBrowser width=0 height=0 classid=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2>');
+document.write('</object>');
+
+document.write('<center class=Noprint>');
+
+document.write('<input type=button value=打印 onclick=PrintPage()>');
+document.write('<input type=button value=页面设置 onclick=document.all.WebBrowser.ExecWB(8,1)>');
+document.write('<input type=button value=打印预览 onclick=document.all.WebBrowser.ExecWB(7,1)>');
+document.write('<Font color="#FF0000">具体打印设置请联系技术部</Font>');
+document.write('</center>');
+?>

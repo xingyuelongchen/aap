@@ -1,0 +1,18 @@
+
+user	=用户表
+	id	= 唯一ID主键
+	uid 	= 用户唯一的ID
+	name 	= 用户名
+	pass	= 密码
+	type 	= 用户类型
+	tel 	= 联系电话
+	email 	= 邮箱
+	time 	= 时间戳
+
+order	=订单表
+	id	= 唯一ID主键
+	uid	= 所属用户的ID
+	order_id= 订单ID
+	content	= 订单内容
+	state	= 订单状态
+	time	= 时间戳

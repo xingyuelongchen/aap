@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document content内容样式*/
+
+/*主体内容*/
+.content{
+	margin:5px auto;
+}
+.h300{
+	height:300px;
+	background:#fff;
+	box-shadow: 0 0 5px 5px #ddd;
+	padding: 30px 0;
+	margin-top:50px;
+	border-radius:10px;
+}
+
+/*搜索*/
+.search{
+	width:700px;
+	height:40px;
+	border: 1px solid #ddd;
+	border-radius:5px;
+	margin-left:25px;
+	overflow:hidden;
+}
+.search:hover{
+	border: 1px solid #f60;
+}
+.search input[name=search]{
+	display:inline-block;
+	width:451px;
+	height:40px;
+	border: none;
+	padding:0 15px;
+	color:#757575;
+}
+.search input:hover{
+	box-shadow:none;
+}
+.search input[name=button]{
+	display:inline-block;
+	width:215px;
+	height:40px;
+	border: none;
+	font-weight: bold;
+	color:#757575;
+	border-left: 1px solid #ddd;
+	background:none;
+	cursor:pointer;
+}
+.search input[name=button]:hover{
+	color:#fff;
+	background:#f60
+}
+/*搜索框下面的信息列表*/
+.info_table{
+	margin:10px 0 0 25px;
+}
+.info_table table{
+	border:1px solid #ddd;
+	border-radius:5px;
+	overflow: hidden;
+}
+.info_table tr{
+	color:#454545;
+	border-bottom: 1px solid #ddd;
+}
+.info_table tr:hover{
+	background:#eee;
+	color:#444;
+	cursor: pointer;
+}
+.info_table tr:first-child:hover{
+	background: none;
+	color:#454545;
+}
+.info_table th,.info_table td{
+	padding: 5px 0;
+	text-align:center;
+	vertical-align:middle
+}
+
+/*页面时间天气*/
+
+.clock{
+	height:300px;
+	padding-top:50px
+}
+.time_bj{
+	width:490px;
+	overflow: hidden;
+	text-align: center;
+	font-family: number;
+}
+.time_bj_year{
+	font-size:32px;
+}
+.time_bj_date{
+	font-size: 44px;
+	letter-spacing:12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

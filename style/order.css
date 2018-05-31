@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+.order {
+	
+}
+.order input[type=date]{
+	border:solid 1px #ddd;
+	width:200px;
+	height:30px;
+	border-radius:5px;
+	cursor:pointer;
+}
+.order_info_list{
+	padding-left:50px;
+}
+.order_info_list li{
+	margin:10px auto;
+	font-size:0;
+}
+.order_info_list li span{
+	display: inline-block;
+	height:30px;
+	line-height: 30px;
+	font-size:14px;
+	margin-right:20px;
+}
+.order_info_list li span input[type=text]{
+	border: solid 1px #ddd;
+	width:200px;
+	height:30px;
+	border-radius:5px;
+	background:rgba(0,0,0,0);
+	text-indent:5px;
+}
+.input_upload{
+	width:200px;
+	height:30px;
+	border-radius:5px;
+}
+.input_upload input[type=file]{
+	width:202px;
+	height:32px;
+}
+.input_upload:hover{
+	box-shadow:0 0 5px 1px #ccc;
+}
+
+.order_info_list_check{
+	width:100%;
+	height:50px;
+	font-size: 0;
+	margin:5px auto;
+}
+.order_info_list_check h1{
+	font-size: 14px;
+	font-weight:normal;
+}
+.order_info_list_check a{
+	display: inline-block;
+	font-size: 14px;
+	width:70px;
+	height:25px;
+	margin:5px 10px;
+	padding:10px 0 0 28px;
+	text-decoration:none;
+	background:url(../images/icon/check.png) no-repeat left center / 20px 20px;
+}
+.order_info_list_check .checked{
+	background:url(../images/icon/check_ok.png) no-repeat left center / 20px 20px;
+}
+.order_button {
+	cursor:pointer;
+	width: 150px;
+	height: 40px;
+	background: #eee;
+	border: solid 1px #ccc;
+	color: #000;
+}

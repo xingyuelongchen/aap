@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.manage{
+	font-size:0;
+}
+.manage .order_list ul > li:nth-child(2) a {
+	display: inline-block;
+	/* padding: -5px 5px; */
+	background: #ddd;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	color:#444;
+}
+.manage .order_list ul > li:nth-child(2) a:hover{
+	color:#fff;
+	background:#f90;
+	text-decoration:none;
+}
+/*条件查询块样式*/
+.order_manage_nav{
+	text-align: left;
+	margin-bottom:10px;
+}
+.order_manage_nav li{
+	line-height: 35px;
+	font-size: 14px;
+	display: block;
+	float:left;
+	margin:0 0 25px 25px;
+}
+.order_manage_nav input{
+	width:150px;
+	height:35px;
+	border:solid 1px #ddd;
+	text-indent:5px;
+}
+.order_manage_nav input[type=button]{
+	width:150px;
+	height:35px;
+	cursor:pointer;
+	border:solid 1px #ddd;
+	
+}
+.order_manage_nav .order_manage_nav_select{
+	width:122px;
+	height:35px;
+	border:solid 1px #ddd;
+	cursor:pointer;
+	position:relative;
+}
+.order_manage_nav .order_manage_nav_select_text{
+	position:absolute;
+	top:0;
+	left:0;
+	width:108px;
+	height:35px;
+	display: inline-block;
+	text-align: center;
+	color:#444;
+}
+.order_manage_nav .order_manage_nav_select_state{
+	position:absolute;
+	top:0;
+	left:100px;
+	width:16px;
+	height:35px;
+	display: inline-block;
+	background:url(../images/icon/een.png) no-repeat center center / 14px 14px;
+	transition:transform .2s;
+}
+.order_manage_nav .order_manage_nav_select_state_ok{
+	position:absolute;
+	top:0;
+	left:100px;
+	width:16px;
+	height:35px;
+	background:url(../images/icon/een.png) no-repeat center center / 14px 14px;
+	transform:rotate(180deg);
+	transition:transform .2s;
+}
+.order_manage_nav_select_option{
+	position:relative;
+	top:35px;
+	right:1px;
+	width:122px;
+	border:solid 1px #ddd;
+	background:#fff;
+	text-align: center;
+	display: none;
+}
+.order_manage_nav_select_option a{
+	display:block;
+	width:100%;
+	height:35px;
+}
+.order_manage_nav_select_option a:hover{
+	background:#f90;
+	color:#fff;
+	text-decoration:none;
+}
